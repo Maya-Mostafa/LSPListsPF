@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "lsp-lists-pf-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/lspListsPf/LspListsPfWebPart.js",
+          "manifest": "./src/webparts/lspListsPf/LspListsPfWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "LspListsPfWebPartStrings": "lib/webparts/lspListsPf/loc/{locale}.js"
+  }
+}
