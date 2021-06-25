@@ -2,7 +2,6 @@ import { WebPartContext } from "@microsoft/sp-webpart-base";
 import {sp, Web} from "@pnp/sp/presets/all";
 
 import {IListItem} from '../webparts/lspListsPf/components/IListItem';
-import {IState} from '../webparts/lspListsPf/components/IState';
 import {ILspListsPfProps} from '../webparts/lspListsPf/components/ILspListsPfProps';
 
  
