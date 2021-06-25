@@ -6,8 +6,7 @@ import {DetailsList, PrimaryButton} from '@fluentui/react';
 
 export default function IListItems (props: IListItemsProps){
 
-    let listItems = props.initListItems;
-    let nextListItems = props.nextListItems;
+    let listItems = props.listItems;
 
     return(
         <div>

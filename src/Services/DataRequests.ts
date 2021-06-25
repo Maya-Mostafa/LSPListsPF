@@ -1,8 +1,6 @@
 import { WebPartContext } from "@microsoft/sp-webpart-base";
 import {sp, Web} from "@pnp/sp/presets/all";
-
 import {IListItem} from '../webparts/lspListsPf/components/IListItem';
-import {ILspListsPfProps} from '../webparts/lspListsPf/components/ILspListsPfProps';
 
  
 export const getLargeListItems = async (context: WebPartContext, listUrl: string, listName: string, pageSize: number) =>{
@@ -21,7 +19,6 @@ export const getLargeListItems = async (context: WebPartContext, listUrl: string
       jobTitle: item.JobTitle,
     });
   });
-  console.log("first response", response);
   
   return [results, response];
 };

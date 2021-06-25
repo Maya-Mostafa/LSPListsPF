@@ -1,4 +1,3 @@
 export interface IListItemsProps{
-    initListItems: any;
-    nextListItems: any;
+    listItems: any;
 }
