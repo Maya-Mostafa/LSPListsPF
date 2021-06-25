@@ -21,7 +21,8 @@ export default class LspListsPfWebPart extends BaseClientSideWebPart<ILspListsPf
     const element: React.ReactElement<ILspListsPfProps> = React.createElement(
       LspListsPf,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        context: this.context
       }
     );
 
