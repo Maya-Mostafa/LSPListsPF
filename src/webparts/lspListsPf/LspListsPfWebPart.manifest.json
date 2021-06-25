@@ -21,7 +21,10 @@
     "description": { "default": "LSPListsPF description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "LSPListsPF"
+      "wpTitle": "Search",
+      "listUrl" : "https://pdsb1.sharepoint.com/sites/contentTypeHub/",
+      "listName" : "Employees",
+      "pageSize" : 15
     }
   }]
 }

@@ -12,7 +12,10 @@ import LspListsPf from './components/LspListsPf';
 import { ILspListsPfProps } from './components/ILspListsPfProps';
 
 export interface ILspListsPfWebPartProps {
-  description: string;
+  wpTitle: string;
+  listUrl: string;
+  listName: string;
+  pageSize: number;
 }
 
 export default class LspListsPfWebPart extends BaseClientSideWebPart<ILspListsPfWebPartProps> {
@@ -21,8 +24,11 @@ export default class LspListsPfWebPart extends BaseClientSideWebPart<ILspListsPf
     const element: React.ReactElement<ILspListsPfProps> = React.createElement(
       LspListsPf,
       {
-        description: this.properties.description,
-        context: this.context
+        wpTitle: this.properties.wpTitle,
+        context: this.context,
+        listUrl: this.properties.listUrl,
+        listName: this.properties.listName,
+        pageSize: this.properties.pageSize
       }
     );
 
@@ -48,8 +54,21 @@ export default class LspListsPfWebPart extends BaseClientSideWebPart<ILspListsPf
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                PropertyPaneTextField('wpTitle', {
+                  label: 'Web part title',
+                  value: this.properties.wpTitle
+                }),
+                PropertyPaneTextField('listUrl', {
+                  label: 'List URL',
+                  value: this.properties.listUrl
+                }),
+                PropertyPaneTextField('listName', {
+                  label: 'List Name',
+                  value: this.properties.listName
+                }),
+                PropertyPaneTextField('pageSize', {
+                  label: 'Page Size',
+                  value: this.properties.pageSize.toString()
                 })
               ]
             }
